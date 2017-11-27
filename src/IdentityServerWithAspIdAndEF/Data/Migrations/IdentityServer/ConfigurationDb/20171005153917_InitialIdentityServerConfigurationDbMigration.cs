@@ -17,7 +17,7 @@ namespace IdentityServerWithAspIdAndEF.Data.Migrations.IdentityServer.Configurat
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Description = table.Column<string>(type: "varchar(1000)", maxLength: 1000, nullable: true),
                     DisplayName = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: true),
-                    Enabled = table.Column<bool>(type: "bit", nullable: false),
+                    Enabled = table.Column<bool>(type: "boolean", nullable: false),
                     Name = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false)
                 },
                 constraints: table =>
@@ -34,14 +34,14 @@ namespace IdentityServerWithAspIdAndEF.Data.Migrations.IdentityServer.Configurat
                     AbsoluteRefreshTokenLifetime = table.Column<int>(type: "int", nullable: false),
                     AccessTokenLifetime = table.Column<int>(type: "int", nullable: false),
                     AccessTokenType = table.Column<int>(type: "int", nullable: false),
-                    AllowAccessTokensViaBrowser = table.Column<bool>(type: "bit", nullable: false),
-                    AllowOfflineAccess = table.Column<bool>(type: "bit", nullable: false),
-                    AllowPlainTextPkce = table.Column<bool>(type: "bit", nullable: false),
-                    AllowRememberConsent = table.Column<bool>(type: "bit", nullable: false),
-                    AlwaysIncludeUserClaimsInIdToken = table.Column<bool>(type: "bit", nullable: false),
-                    AlwaysSendClientClaims = table.Column<bool>(type: "bit", nullable: false),
+                    AllowAccessTokensViaBrowser = table.Column<bool>(type: "boolean", nullable: false),
+                    AllowOfflineAccess = table.Column<bool>(type: "boolean", nullable: false),
+                    AllowPlainTextPkce = table.Column<bool>(type: "boolean", nullable: false),
+                    AllowRememberConsent = table.Column<bool>(type: "boolean", nullable: false),
+                    AlwaysIncludeUserClaimsInIdToken = table.Column<bool>(type: "boolean", nullable: false),
+                    AlwaysSendClientClaims = table.Column<bool>(type: "boolean", nullable: false),
                     AuthorizationCodeLifetime = table.Column<int>(type: "int", nullable: false),
-                    BackChannelLogoutSessionRequired = table.Column<bool>(type: "bit", nullable: false),
+                    BackChannelLogoutSessionRequired = table.Column<bool>(type: "boolean", nullable: false),
                     BackChannelLogoutUri = table.Column<string>(type: "varchar(2000)", maxLength: 2000, nullable: true),
                     ClientClaimsPrefix = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: true),
                     ClientId = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
@@ -49,22 +49,22 @@ namespace IdentityServerWithAspIdAndEF.Data.Migrations.IdentityServer.Configurat
                     ClientUri = table.Column<string>(type: "varchar(2000)", maxLength: 2000, nullable: true),
                     ConsentLifetime = table.Column<int>(type: "int", nullable: true),
                     Description = table.Column<string>(type: "varchar(1000)", maxLength: 1000, nullable: true),
-                    EnableLocalLogin = table.Column<bool>(type: "bit", nullable: false),
-                    Enabled = table.Column<bool>(type: "bit", nullable: false),
-                    FrontChannelLogoutSessionRequired = table.Column<bool>(type: "bit", nullable: false),
+                    EnableLocalLogin = table.Column<bool>(type: "boolean", nullable: false),
+                    Enabled = table.Column<bool>(type: "boolean", nullable: false),
+                    FrontChannelLogoutSessionRequired = table.Column<bool>(type: "boolean", nullable: false),
                     FrontChannelLogoutUri = table.Column<string>(type: "varchar(2000)", maxLength: 2000, nullable: true),
                     IdentityTokenLifetime = table.Column<int>(type: "int", nullable: false),
-                    IncludeJwtId = table.Column<bool>(type: "bit", nullable: false),
+                    IncludeJwtId = table.Column<bool>(type: "boolean", nullable: false),
                     LogoUri = table.Column<string>(type: "varchar(2000)", maxLength: 2000, nullable: true),
                     PairWiseSubjectSalt = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: true),
                     ProtocolType = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
                     RefreshTokenExpiration = table.Column<int>(type: "int", nullable: false),
                     RefreshTokenUsage = table.Column<int>(type: "int", nullable: false),
-                    RequireClientSecret = table.Column<bool>(type: "bit", nullable: false),
-                    RequireConsent = table.Column<bool>(type: "bit", nullable: false),
-                    RequirePkce = table.Column<bool>(type: "bit", nullable: false),
+                    RequireClientSecret = table.Column<bool>(type: "boolean", nullable: false),
+                    RequireConsent = table.Column<bool>(type: "boolean", nullable: false),
+                    RequirePkce = table.Column<bool>(type: "boolean", nullable: false),
                     SlidingRefreshTokenLifetime = table.Column<int>(type: "int", nullable: false),
-                    UpdateAccessTokenClaimsOnRefresh = table.Column<bool>(type: "bit", nullable: false)
+                    UpdateAccessTokenClaimsOnRefresh = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -79,11 +79,11 @@ namespace IdentityServerWithAspIdAndEF.Data.Migrations.IdentityServer.Configurat
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Description = table.Column<string>(type: "varchar(1000)", maxLength: 1000, nullable: true),
                     DisplayName = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: true),
-                    Emphasize = table.Column<bool>(type: "bit", nullable: false),
-                    Enabled = table.Column<bool>(type: "bit", nullable: false),
+                    Emphasize = table.Column<bool>(type: "boolean", nullable: false),
+                    Enabled = table.Column<bool>(type: "boolean", nullable: false),
                     Name = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
-                    Required = table.Column<bool>(type: "bit", nullable: false),
-                    ShowInDiscoveryDocument = table.Column<bool>(type: "bit", nullable: false)
+                    Required = table.Column<bool>(type: "boolean", nullable: false),
+                    ShowInDiscoveryDocument = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -119,10 +119,10 @@ namespace IdentityServerWithAspIdAndEF.Data.Migrations.IdentityServer.Configurat
                     ApiResourceId = table.Column<int>(type: "int", nullable: false),
                     Description = table.Column<string>(type: "varchar(1000)", maxLength: 1000, nullable: true),
                     DisplayName = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: true),
-                    Emphasize = table.Column<bool>(type: "bit", nullable: false),
+                    Emphasize = table.Column<bool>(type: "boolean", nullable: false),
                     Name = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
-                    Required = table.Column<bool>(type: "bit", nullable: false),
-                    ShowInDiscoveryDocument = table.Column<bool>(type: "bit", nullable: false)
+                    Required = table.Column<bool>(type: "boolean", nullable: false),
+                    ShowInDiscoveryDocument = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
