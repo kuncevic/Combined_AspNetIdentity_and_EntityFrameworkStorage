@@ -30,7 +30,7 @@ namespace IdentityServerWithAspNetIdentity
                 .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}", theme: AnsiConsoleTheme.Literate)
                 .CreateLogger();
 
-            var seed = args.Contains("/seed");
+            var seed = true;// args.Contains("/seed");
             if (seed)
             {
                 args = args.Except(new[] { "/seed" }).ToArray();

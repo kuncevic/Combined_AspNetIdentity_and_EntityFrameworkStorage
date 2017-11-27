@@ -15,7 +15,7 @@ namespace IdentityServerWithAspNetIdentity.Data.Migrations
                 name: "AspNetRoles",
                 columns: table => new
                 {
-                    Id = table.Column<string>(nullable: false),
+                    Id = table.Column<string>(type: "varchar(2000)", nullable: false),
                     ConcurrencyStamp = table.Column<string>(nullable: true),
                     Name = table.Column<string>(maxLength: 256, nullable: true),
                     NormalizedName = table.Column<string>(maxLength: 256, nullable: true)
@@ -29,9 +29,9 @@ namespace IdentityServerWithAspNetIdentity.Data.Migrations
                 name: "AspNetUserTokens",
                 columns: table => new
                 {
-                    UserId = table.Column<string>(nullable: false),
-                    LoginProvider = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: false),
+                    UserId = table.Column<string>(type: "varchar(2000)", nullable: false),
+                    LoginProvider = table.Column<string>(type: "varchar(2000)", nullable: false),
+                    Name = table.Column<string>(type: "varchar(2000)", nullable: false),
                     Value = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -43,7 +43,7 @@ namespace IdentityServerWithAspNetIdentity.Data.Migrations
                 name: "AspNetUsers",
                 columns: table => new
                 {
-                    Id = table.Column<string>(nullable: false),
+                    Id = table.Column<string>(type: "varchar(2000)", nullable: false),
                     AccessFailedCount = table.Column<int>(nullable: false),
                     ConcurrencyStamp = table.Column<string>(nullable: true),
                     Email = table.Column<string>(maxLength: 256, nullable: true),
@@ -72,7 +72,7 @@ namespace IdentityServerWithAspNetIdentity.Data.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ClaimType = table.Column<string>(nullable: true),
                     ClaimValue = table.Column<string>(nullable: true),
-                    RoleId = table.Column<string>(nullable: false)
+                    RoleId = table.Column<string>(type: "varchar(2000)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -93,7 +93,7 @@ namespace IdentityServerWithAspNetIdentity.Data.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ClaimType = table.Column<string>(nullable: true),
                     ClaimValue = table.Column<string>(nullable: true),
-                    UserId = table.Column<string>(nullable: false)
+                    UserId = table.Column<string>(type: "varchar(2000)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -110,10 +110,10 @@ namespace IdentityServerWithAspNetIdentity.Data.Migrations
                 name: "AspNetUserLogins",
                 columns: table => new
                 {
-                    LoginProvider = table.Column<string>(nullable: false),
-                    ProviderKey = table.Column<string>(nullable: false),
+                    LoginProvider = table.Column<string>(type: "varchar(2000)", nullable: false),
+                    ProviderKey = table.Column<string>(type: "varchar(2000)", nullable: false),
                     ProviderDisplayName = table.Column<string>(nullable: true),
-                    UserId = table.Column<string>(nullable: false)
+                    UserId = table.Column<string>(type: "varchar(2000)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -130,8 +130,8 @@ namespace IdentityServerWithAspNetIdentity.Data.Migrations
                 name: "AspNetUserRoles",
                 columns: table => new
                 {
-                    UserId = table.Column<string>(nullable: false),
-                    RoleId = table.Column<string>(nullable: false)
+                    UserId = table.Column<string>(type: "varchar(2000)", nullable: false),
+                    RoleId = table.Column<string>(type: "varchar(2000)", nullable: false)
                 },
                 constraints: table =>
                 {

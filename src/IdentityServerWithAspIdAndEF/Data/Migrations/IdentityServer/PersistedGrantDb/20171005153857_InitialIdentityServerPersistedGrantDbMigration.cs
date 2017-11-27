@@ -12,13 +12,13 @@ namespace IdentityServerWithAspIdAndEF.Data.Migrations.IdentityServer.PersistedG
                 name: "PersistedGrants",
                 columns: table => new
                 {
-                    Key = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    ClientId = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    CreationTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Data = table.Column<string>(type: "nvarchar(max)", maxLength: 50000, nullable: false),
-                    Expiration = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    SubjectId = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
-                    Type = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
+                    Key = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
+                    ClientId = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false),
+                    CreationTime = table.Column<DateTime>(type: "TIMESTAMP", nullable: false),
+                    Data = table.Column<string>(type: "varchar(2000)", maxLength: 50000, nullable: false),
+                    Expiration = table.Column<DateTime>(type: "TIMESTAMP", nullable: true),
+                    SubjectId = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: true),
+                    Type = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
